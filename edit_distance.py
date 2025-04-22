@@ -1,24 +1,8 @@
 def edit_distance(s1, s2):
-    """
-    Calcula a distância de edição entre duas strings, utilizando recursão com memoization.
-
-    Parâmetros:
-    s1 (str): Primeira string.
-    s2 (str): Segunda string.
-
-    Retorno:
-    int: Número mínimo de operações (inserção, exclusão, substituição).
-    """
 
     cache = {}
 
     def calcular(i, j):
-        """
-        Função auxiliar recursiva que calcula a distância entre os sufixos s1[i:] e s2[j:].
-
-        Utiliza memoization para armazenar os resultados de chamadas anteriores,
-        evitando recomputações desnecessárias.
-        """
 
         if (i, j) in cache:
             return cache[(i, j)]
